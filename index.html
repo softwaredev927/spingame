@@ -65,11 +65,11 @@
       }
     </style>
     <title>SPIN WHEEL</title>
-    <script type="module" crossorigin src="/assets/index-21aa5f1b.js"></script>
+    <script type="module" crossorigin src="./assets/index-21aa5f1b.js"></script>
   </head>
   <body>
     <div class="app-loader">
-      <img src="/logo.png" />
+      <img src="./logo.png" />
     </div>
     <script>
       setTimeout(() => {
@@ -79,7 +79,7 @@
         img.onload = function () {
           loader.querySelector("img").style.opacity = "1";
         };
-        img.src = "/logo.png";
+        img.src = "./logo.png";
 
         const theme = appSettings
           ? JSON.parse(appSettings).state.themeMode
