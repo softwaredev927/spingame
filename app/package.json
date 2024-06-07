@@ -3,7 +3,7 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
-  "homepage":"https://softwaredev927.github.io/spingame/",
+  "homepage":".",
   "scripts": {
     "dev": "vite --port 3001",
     "prod": "vite --port 3002",
