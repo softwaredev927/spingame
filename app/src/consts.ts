@@ -1,15 +1,7 @@
 import _ from "lodash";
 
 export const routes = {
-  spaces: "/DaosPage",
-  createSpace: "/setup",
-  runSpinGame:"/",
-  proposal: "/:daoId/proposal/:proposalId",
-  editProposal: "/:daoId/proposal/:proposalId/edit",
-  space: "/:daoId",
-  spaceAbout: "/:daoId/about",
-  spaceSettings: "/:daoId/settings",
-  createProposal: "/:daoId/create",
+  runSpinGame:"/spingame",
 };
 
 export const flatRoutes = _.map(routes, (value) => {

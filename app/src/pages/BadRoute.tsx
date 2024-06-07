@@ -12,7 +12,7 @@ export function BadRoute() {
       <StyledContainer>
         <StyledFlexColumn gap={20}>
           <Typography className="title">Page doesn't exist</Typography>
-          <Button onClick={() => navigate.daosPage.root()}>
+          <Button onClick={() => navigate.runSpinGame.root()}>
             <Typography>Go Home</Typography>
           </Button>
         </StyledFlexColumn>

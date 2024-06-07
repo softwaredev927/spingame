@@ -8,7 +8,7 @@ import { StyledFlexColumn } from "styles";
 export const ErrorFallback = (props: FallbackProps) => {
   const appNavigation = useAppNavigation();
   const reset = () => {
-    appNavigation.daosPage.root();
+    appNavigation.runSpinGame;
     props.resetErrorBoundary();
   };
   return (

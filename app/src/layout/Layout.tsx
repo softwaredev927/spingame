@@ -7,7 +7,6 @@ import ScrollTop from "components/ScrollTop";
 import { Toaster } from "react-hot-toast";
 import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback } from "./ErrorBoundary";
-import { Toolbar } from "./Toolbar";
 import { ReactNode, useEffect } from "react";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
@@ -37,7 +36,6 @@ function Layout({ children }: { children?: ReactNode }) {
     <>
       <Fade in={true} timeout={500}>
         <StyledContainer>
-          <Toolbar />
           <Navbar />
           <ErrorBoundary
             fallbackRender={(props) => <ErrorFallback {...props} />}

@@ -12,7 +12,7 @@ export function ErrorContainer({ text }: { text: string }) {
         <StyledContent>
           <Typography className="text">{text}</Typography>
         </StyledContent>
-        <Button onClick={() => navigate.daosPage.root()}>Home</Button>
+        <Button onClick={() => navigate.runSpinGame.root()}>Home</Button>
       </StyledFlexColumn>
     </StyledContainer>
   );
