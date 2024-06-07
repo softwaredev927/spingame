@@ -4,22 +4,10 @@ import { routes } from "consts";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { lazy, Suspense, useMemo } from "react";
 import { useDevFeatures } from "hooks/hooks";
-import { DaoPageFallback, DaosPageFallback, PageFallback } from "./fallbacks";
-import {
-  BadRoute,
-  CreateProposal,
-  Dao,
-  DaoAbout,
-  DaosPage,
-  EditProposal,
-  Proposal,
-  ProposalDisplay,
-  ProposalsList,
-} from "pages";
+import { PageFallback } from "./fallbacks";
+import { BadRoute } from "pages";
 
-const CreateDao = lazy(() => import("pages/create-dao/CreateDao"));
 const SpinGame = lazy(() => import("pages/run-spin-game/SpinGame"));
-const DaoSettings = lazy(() => import("pages/dao/DaoSettings/DaoSettings"));
 
 export const useRouter = () => {
   const devFeatures = useDevFeatures();
@@ -29,10 +17,21 @@ export const useRouter = () => {
       createBrowserRouter([
         {
           path: "/",
-          element: <SpinGame />,
+          element: <Layout />,
+          children: [
+            {
+              path: routes.runSpinGame,
+              errorElement: <Navigate to={routes.runSpinGame} />,
+              element: (
+                <Suspense fallback={<PageFallback />}>
+                  <SpinGame />
+                </Suspense>
+              ),
+            },
+          ],
           errorElement: (
             <Suspense fallback={<PageFallback />}>
-              <BadRoute />
+              <BadRoute/>
             </Suspense>
           ),
         },
